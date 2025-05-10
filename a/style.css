@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: beige;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hand {
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom;
+}
+
+.seconds {
+  height: 45%;
+  background-color: red;
+}
+
+.minutes {
+  height: 40%;
+  background-color: gray;
+}
+
+.hours {
+  height: 35%;
+  background-color: black;
+}
+
+.center {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+
+.number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+
+.one {
+  --rotation: 30deg;
+}
+.two {
+  --rotation: 60deg;
+}
+.three {
+  --rotation: 90deg;
+}
+.four {
+  --rotation: 120deg;
+}
+.five {
+  --rotation: 150deg;
+}
+.six {
+  --rotation: 180deg;
+}
+.seven {
+  --rotation: 210deg;
+}
+.eight {
+  --rotation: 240deg;
+}
+.nine {
+  --rotation: 270deg;
+}
+.ten {
+  --rotation: 300deg;
+}
+.eleven {
+  --rotation: 330deg;
+}
+.twelve {
+  --rotation: 360deg;
+}
