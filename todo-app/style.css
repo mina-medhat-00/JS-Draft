@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+:root {
+  --bg-color: #f4f4f8;
+  --notes-color: #fff;
+  --border-color: #f4f4f8;
+  --completed-task: #ccc;
+}
+
+.dark-theme {
+  --bg-color: #c3c3c3;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: var(--bg-color);
+  font-size: 16px;
+}
+
+select,
+textarea,
+button,
+input {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.notes-container input {
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+.container input {
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--completed-task);
+}
+
+.note {
+  padding: 0.75rem;
+  border-bottom: 0.05rem solid var(--border-color);
+}
+
+.note:last-child {
+  border-bottom: none;
+}
+
+.notes-container {
+  background-color: var(--notes-color);
+  border-radius: 0.5rem;
+}
+
+#notes-input {
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+#notes-input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 40%;
+  }
+}
