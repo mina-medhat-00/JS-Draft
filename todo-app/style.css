@@ -1,10 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
+/* 
+Very Light Gray: hsl(0, 0%, 98%)
+Very Light Grayish Blue: hsl(236, 33%, 92%)
+Light Grayish Blue: hsl(233, 11%, 84%)
+Dark Grayish Blue: hsl(236, 9%, 61%)
+Very Dark Grayish Blue: hsl(235, 19%, 35%)
+*/
+
+/*
+Very Dark Blue: hsl(235, 21%, 11%)
+Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+Light Grayish Blue: hsl(234, 39%, 85%)
+Light Grayish Blue (hover): hsl(236, 33%, 92%)
+Dark Grayish Blue: hsl(234, 11%, 52%)
+Very Dark Grayish Blue: hsl(233, 14%, 35%)
+Very Dark Grayish Blue: hsl(237, 14%, 26%)
+*/
+
 :root {
   --bg-color: #f4f4f8;
-  --notes-color: #fff;
-  --border-color: #f4f4f8;
+  --items-bg-color: #fff;
   --completed-task: #ccc;
+  --border-color: #f4f4f8;
 }
 
 .dark-theme {
@@ -22,7 +40,7 @@
 body {
   font-family: "Source Sans 3", sans-serif;
   background-color: var(--bg-color);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 select,
@@ -45,12 +63,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-}
-
-.notes-container input {
-  cursor: pointer;
-  border-radius: 50%;
-  border: none;
+  font-size: 1rem;
 }
 
 .container {
@@ -59,10 +72,7 @@ button {
   padding-top: 2rem;
 }
 
-.container input {
-}
-
-.completed {
+.complete {
   text-decoration: line-through;
   color: var(--completed-task);
 }
@@ -70,14 +80,15 @@ button {
 .note {
   padding: 0.75rem;
   border-bottom: 0.05rem solid var(--border-color);
+  font-size: 1rem;
 }
 
 .note:last-child {
   border-bottom: none;
 }
 
-.notes-container {
-  background-color: var(--notes-color);
+#notes-container {
+  background-color: var(--items-bg-color);
   border-radius: 0.5rem;
 }
 
@@ -85,16 +96,41 @@ button {
   width: 100%;
   border: none;
   padding: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 #notes-input:focus {
   outline: none;
 }
 
-@media screen and (min-width: 480px) {
+#notes-filter-container {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--items-bg-color);
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.active-filter {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 720px) {
   .container {
     width: 40%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #incomplete-count {
+    display: none;
+  }
+
+  #clear-completed-btn {
+    display: none;
   }
 }

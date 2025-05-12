@@ -23,8 +23,15 @@
           autocomplete="off"
         />
       </form>
-      <div class="notes-container">
+      <div id="notes-container">
         <ul id="notes-list"></ul>
+      </div>
+      <div id="notes-filter-container">
+        <span id="incomplete-count">0 Items Left</span>
+        <button class="filter-btn active-filter">All</button>
+        <button class="filter-btn">Active</button>
+        <button class="filter-btn">Completed</button>
+        <button id="clear-completed-btn">Clear Completed</button>
       </div>
     </div>
   </body>
