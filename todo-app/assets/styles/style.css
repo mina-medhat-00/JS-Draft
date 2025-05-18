@@ -41,8 +41,20 @@ body {
   font-family: "Source Sans 3", sans-serif;
   background-color: var(--bg-color);
   font-size: 18px;
-  background-image: url("./assets/bg-desktop-light.jpg");
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-image: url("/assets/bg-desktop-light.jpg");
   background-repeat: no-repeat;
+  z-index: -10;
+}
+
+.image-container > img {
+  width: 100%;
 }
 
 select,
@@ -56,7 +68,7 @@ ul {
   list-style: none;
 }
 
-li {
+.todo-item {
   display: flex;
   justify-content: space-between;
 }
@@ -85,7 +97,7 @@ button {
   overflow-wrap: anywhere;
 }
 
-.hidden-note {
+.hidden {
   display: none;
 }
 
@@ -122,22 +134,28 @@ button {
   border-radius: 0.5rem;
 }
 
-.active-filter {
+#incomplete-count {
+  display: none;
+}
+
+#clear-completed-btn {
+  display: none;
+}
+
+.text-btn.active {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 600px) {
   .container {
     width: 40%;
   }
-}
 
-@media screen and (max-width: 375px) {
   #incomplete-count {
-    display: none;
+    display: block;
   }
 
   #clear-completed-btn {
-    display: none;
+    display: block;
   }
 }
